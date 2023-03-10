@@ -1,19 +1,25 @@
 .container {
     margin: 0 auto;
-    max-width: 1090px;
+    max-width: 1190px;
 }
 * {
     font-family: 'Merriweather', serif;
     color: #5a3b8d;
+}
+h1 {
+    font-size: 4rem;
+}
+.bayan {
+    padding: 0 2rem;
 }
 
 .bayan__rabber {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .bayan__wrapper {
@@ -23,36 +29,35 @@
     align-items: center;
 }
 .bayan__wrapper:hover .bayan-item__open {
-    font-size: 1rem;
+    opacity: 1;
 }
 .bayan-item__subtitle {
-    font-size: 1rem;
+    font-size: 3rem;
 }
-.bayan-item__close, .bayan-item__open {
-    font-size: 0;
-    transition: all 0.5s;
+.bayan-item__open {
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 
 label {
     width: 100%;
-    padding: 10px;
-    border-top: 3px solid #8dadc8;
+    padding: 1rem 0;
+    border-top: 0.2rem solid #8dadc8;
     cursor: pointer;
+    margin-bottom: 3rem;
 }
 
-/*input {*/
-/*    display: none;*/
-/*}*/
+input {
+    display: none;
+}
 
 
 
 /*момент клика на каждый item*/
-.bayan-item__close, .bayan-item__open {
-    font-size: 0;
-}
 
-input:active ~ * .bayan-item__close, input:active ~ * .bayan-item__close i {
+input:active ~ * .bayan-item__close, input:active ~ * .bayan-item__open {
     color: #ff3131;
 }
 input:active ~ .bayan__img {
@@ -67,17 +72,14 @@ input:active ~ * .bayan-item__subtitle {
 
 /*ховер эффект на каждый item*/
 
-input:hover ~ * .bayan-item__close {
-    font-size: 1rem;
-    transform: scale(1);
-}
 input:hover ~ * .bayan-item__open {
-    font-size: 0 !important;
-    transform: scale(0);
+    opacity: 1;
+    transform: scale(1);
+    transform: rotate(45deg);
 }
 input:hover ~ .bayan__img {
     transform: scale(1);
-    height: 300px;
+    height: 20rem;
 }
 
 /* Клик по каждому item'у или по-другому выбор определенного чекбокса */
@@ -105,9 +107,10 @@ input:hover ~ .bayan__img {
 .bayan__img {
     display: block;
     margin: 0 auto;
-    width: 300px;
+    width: 20rem;
     object-fit: cover;
     height: 0;
     transition: all 0.5s;
     transform: scale(0);
+    margin-top: 2rem;
 }
