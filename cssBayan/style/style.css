@@ -23,13 +23,14 @@
     align-items: center;
 }
 .bayan__wrapper:hover .bayan-item__open {
-    display: flex;
+    font-size: 1rem;
 }
 .bayan-item__subtitle {
-    font-size: 20px;
+    font-size: 1rem;
 }
 .bayan-item__close, .bayan-item__open {
-    display: none;
+    font-size: 0;
+    transition: all 0.5s;
 }
 
 
@@ -43,15 +44,12 @@ label {
 /*input {*/
 /*    display: none;*/
 /*}*/
-i {
-    font-size: 20px;
-}
 
 
 
 /*момент клика на каждый item*/
 .bayan-item__close, .bayan-item__open {
-    display: none;
+    font-size: 0;
 }
 
 input:active ~ * .bayan-item__close, input:active ~ * .bayan-item__close i {
@@ -70,10 +68,12 @@ input:active ~ * .bayan-item__subtitle {
 /*ховер эффект на каждый item*/
 
 input:hover ~ * .bayan-item__close {
-    display: flex;
+    font-size: 1rem;
+    transform: scale(1);
 }
 input:hover ~ * .bayan-item__open {
-    display: none !important;
+    font-size: 0 !important;
+    transform: scale(0);
 }
 input:hover ~ .bayan__img {
     transform: scale(1);
