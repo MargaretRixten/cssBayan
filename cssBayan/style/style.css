@@ -1,0 +1,113 @@
+.container {
+    margin: 0 auto;
+    max-width: 1090px;
+}
+* {
+    font-family: 'Merriweather', serif;
+    color: #5a3b8d;
+}
+
+.bayan__rabber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.bayan__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.bayan__wrapper:hover .bayan-item__open {
+    display: flex;
+}
+.bayan-item__subtitle {
+    font-size: 20px;
+}
+.bayan-item__close, .bayan-item__open {
+    display: none;
+}
+
+
+label {
+    width: 100%;
+    padding: 10px;
+    border-top: 3px solid #8dadc8;
+    cursor: pointer;
+}
+
+/*input {*/
+/*    display: none;*/
+/*}*/
+i {
+    font-size: 20px;
+}
+
+
+
+/*момент клика на каждый item*/
+.bayan-item__close, .bayan-item__open {
+    display: none;
+}
+
+input:active ~ * .bayan-item__close, input:active ~ * .bayan-item__close i {
+    color: #ff3131;
+}
+input:active ~ .bayan__img {
+    opacity: 0.5;
+}
+input:active ~ * .bayan-item__subtitle {
+    color: #ff3131;
+}
+
+
+
+
+/*ховер эффект на каждый item*/
+
+input:hover ~ * .bayan-item__close {
+    display: flex;
+}
+input:hover ~ * .bayan-item__open {
+    display: none !important;
+}
+input:hover ~ .bayan__img {
+    transform: scale(1);
+    height: 300px;
+}
+
+/* Клик по каждому item'у или по-другому выбор определенного чекбокса */
+
+/*input:checked ~ * .bayan-item__close {*/
+/*    display: flex;*/
+/*}*/
+/*input:checked ~ .bayan__img {*/
+/*    height: 300px;*/
+/*    transform: scale(1);*/
+/*}*/
+/*input:not(:hover) ~ * .bayan-item__close {*/
+/*    display: flex;*/
+/*}*/
+
+
+
+.bayan-item__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.bayan__img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    object-fit: cover;
+    height: 0;
+    transition: all 0.5s;
+    transform: scale(0);
+}
