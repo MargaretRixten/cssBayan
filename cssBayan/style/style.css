@@ -6,6 +6,9 @@
     /*font-family: 'Merriweather', serif;*/
     color: #005aff;
 }
+h1 {
+    color: black;
+}
 .bayan {
     padding: 0 2rem;
 }
@@ -32,7 +35,7 @@
     font-size: 3rem;
     opacity: 0;
     transition: all 0.3s;
-    color: black;
+    color: #005aff;
 }
 
 
@@ -50,6 +53,9 @@ input {
 /*момент клика на каждый item*/
 
 input:checked ~ * .bayan-item__subtitle {
+    color: black;
+}
+input:checked ~ * .bayan-item__open {
     color: black;
 }
 
@@ -128,6 +134,7 @@ input:checked ~ * .bayan-item__open {
     }
     .bayan__wrapper:hover .bayan-item__open {
         opacity: 1;
+        color: black;
     }
     .bayan__wrapper:hover .bayan-item__subtitle {
         color: black;
