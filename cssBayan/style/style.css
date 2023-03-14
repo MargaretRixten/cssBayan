@@ -97,7 +97,23 @@ input:checked ~ * .bayan-item__open {
     margin-top: 2rem;
 }
 
-
+@media (hover: hover) {
+    input:hover ~ * .bayan-item__open {
+        opacity: 1;
+        transform: rotate(45deg);
+        color: black;
+    }
+    input:hover ~ .bayan__img {
+        height: 20rem;
+    }
+    .bayan__wrapper:hover .bayan-item__open {
+        opacity: 1;
+        color: black;
+    }
+    .bayan__wrapper:hover .bayan-item__subtitle {
+        color: black;
+    }
+}
 @media (min-width: 320px) {
     h1 {
         font-size: 1.5rem;
@@ -123,21 +139,6 @@ input:checked ~ * .bayan-item__open {
 @media (min-width: 821px) {
     h1 {
         font-size: 2.5rem;
-    }
-    input:hover ~ * .bayan-item__open {
-        opacity: 1;
-        transform: rotate(45deg);
-        color: black;
-    }
-    input:hover ~ .bayan__img {
-        height: 20rem;
-    }
-    .bayan__wrapper:hover .bayan-item__open {
-        opacity: 1;
-        color: black;
-    }
-    .bayan__wrapper:hover .bayan-item__subtitle {
-        color: black;
     }
     input:checked ~ .bayan__img {
         height: 20rem;
